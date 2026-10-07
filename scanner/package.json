@@ -1,0 +1,21 @@
+{
+  "name": "@tombstone-sg/scanner",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "scan:mainnets": "bun run scripts/scan-mainnets.ts",
+    "check": "bun run scripts/check-wallets.ts",
+    "skeleton": "bun run scripts/skeleton.ts",
+    "phish-tan": "bun run scripts/phish-tan.ts"
+  },
+  "dependencies": {
+    "viem": "2.34.0"
+  },
+  "devDependencies": {
+    "@types/bun": "1.3.0",
+    "typescript": "5.9.3"
+  }
+}
