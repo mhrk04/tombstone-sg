@@ -1,0 +1,44 @@
+{
+  "_comment": "chainMask bits: 0=ethereum 1=base 2=arbitrum 3=optimism 4=bsc 5=polygon 6=gnosis 7=unichain 8=sepolia. Writes target the 3 testnets only.",
+  "_nownodes": "NOWNodes free key works ONLY on eth.nownodes.io + eth-sepolia.nownodes.io (api-key header). keyed:true chains retry once on fallbackUrl after 404/429. Gnosis has no NOWNodes host.",
+  "schedule": "0 */10 * * * *",
+  "scanMode": "batch",
+  "blockTag": "latest",
+  "scanChains": [
+    { "name": "ethereum", "index": 0, "url": "https://eth.nownodes.io", "keyed": true, "fallbackUrl": "https://ethereum-rpc.publicnode.com" },
+    { "name": "base", "index": 1, "url": "https://mainnet.base.org", "keyed": false },
+    { "name": "arbitrum", "index": 2, "url": "https://arbitrum-one-rpc.publicnode.com", "keyed": false },
+    { "name": "optimism", "index": 3, "url": "https://optimism-rpc.publicnode.com", "keyed": false },
+    { "name": "bsc", "index": 4, "url": "https://bsc-rpc.publicnode.com", "keyed": false },
+    { "name": "polygon", "index": 5, "url": "https://polygon-bor-rpc.publicnode.com", "keyed": false },
+    { "name": "gnosis", "index": 6, "url": "https://gnosis-rpc.publicnode.com", "keyed": false },
+    { "name": "unichain", "index": 7, "url": "https://unichain-rpc.publicnode.com", "keyed": false },
+    { "name": "sepolia", "index": 8, "url": "https://eth-sepolia.nownodes.io", "keyed": true, "fallbackUrl": "https://ethereum-sepolia-rpc.publicnode.com" }
+  ],
+  "watchlist": [
+    "0x000000000000000000000000000000000000a11c",
+    "0x000000000000000000000000000000000000b0b0",
+    "0x000000000000000000000000000000000000ca401",
+    "0x0000000000000000000000000000000000007a2e"
+  ],
+  "knownGood": [
+    "0x63c0c19a282a1b52b07dd5a65b58948a07dae32b",
+    "0x000000009b1d0af20d8c6d0a44e162d11f9b8f00"
+  ],
+  "knownSweepers": [
+    "0x89383882fc2d0cd4d7952a3267a3b6dae967e704",
+    "0xa03fc3c62d26253b3ec3076cb871afa3b5fa60ab",
+    "0x08f5e230d412f0cd475b03b9acb51d1562f730f9"
+  ],
+  "sweeperSkeletons": [
+    "0x84593f690155fc195163a8fbd37122d36e5877c0f69a98b4dd9c3161d036fc6d"
+  ],
+  "maxHttpCalls": 15,
+  "maxWalletsPerRun": 50,
+  "httpAuthorizedKeys": [],
+  "targets": [
+    { "chainName": "ethereum-testnet-sepolia", "registry": "0x0000000000000000000000000000000000000001" },
+    { "chainName": "ethereum-testnet-sepolia-base-1", "registry": "0x0000000000000000000000000000000000000001" },
+    { "chainName": "ethereum-testnet-sepolia-arbitrum-1", "registry": "0x0000000000000000000000000000000000000001" }
+  ]
+}
