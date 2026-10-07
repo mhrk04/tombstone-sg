@@ -1,0 +1,30 @@
+
+# >>> SpecShip root ignores >>>
+node_modules/
+dist/
+build/
+.playwright-mcp/
+**/data/*.db
+*.db
+.env
+.env.*
+!.env.example
+/*.png
+/*.jpeg
+.specship/artifacts/
+# <<< SpecShip root ignores <<<
+
+# >>> Tombstone SG project ignores >>>
+.env
+.env.*
+!.env.example
+app/.env.local
+node_modules
+contracts/out
+contracts/cache
+contracts/broadcast
+scanner/out
+dist
+cre-workflow/scan/*.wasm
+*.wasm
+# <<< Tombstone SG project ignores <<<
